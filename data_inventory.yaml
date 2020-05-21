@@ -2,17 +2,7 @@
 #  I typically use it just for data/collected, i.e. for downloaded data, when it's important to
 #   know not just the source URL, but the context of the dataset when published
 
-data/collected/hello.txt:
-  url: https://gist.githubusercontent.com/dannguyen/df87d9d4cf42ed7b4f9549553ea5b8c8/raw/9bf95b5c6e234e491821cd355f6db1ec655cbe38/hello.txt
-  landing_page: https://gist.github.com/dannguyen/df87d9d4cf42ed7b4f9549553ea5b8c8
-  description: |
-    A sample "raw data" file for the template project.
+data/collected/salaries-2020-04-03.csv:
+  url: https://s3.amazonaws.com/raw.texastribune.org/state_of_texas/salaries/03_non_duplicated_employees/2020-04-03.csv
+  landing_page: https://salaries.texastribune.org/
 
-    Tab delimited computing pioneers
-
-
-data/collected/world.txt:
-  url: https://gist.github.com/dannguyen/df87d9d4cf42ed7b4f9549553ea5b8c8/raw/9bf95b5c6e234e491821cd355f6db1ec655cbe38/world.txt
-  landing_page: https://gist.github.com/dannguyen/df87d9d4cf42ed7b4f9549553ea5b8c8
-  description: |
-    Tab delimited heroes
