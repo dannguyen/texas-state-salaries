@@ -1,0 +1,22 @@
+original_name,compiled_name
+AGY,agency_code
+AGENCY NAME,agency_name
+LAST NAME,last_name
+FIRST NAME,first_name
+MI,middle_initial
+CLASS CODE,class_code
+CLASS TITLE,class_title
+ETHNICITY,ethnicity
+GENDER,gender
+STATUS,status
+EMPLOY DATE,employ_date
+HRLY RATE,hourly_rate
+HRS PER WK,hours_per_week
+MONTHLY,monthly_rate
+ANNUAL,annual_rate
+STATE NUMBER,state_number
+duplicated,duplicated
+multiple_full_time_jobs,multiple_full_time_jobs
+combined_multiple_jobs,combined_multiple_jobs
+summed_annual_salary,summed_annual_salary
+hide_from_search,hide_from_search

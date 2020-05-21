@@ -1,11 +1,10 @@
 .DEFAULT_GOAL := help
 .PHONY : clean help ALL
 
-SQLIZED_DB = data/wrapped/sqlized.sqlite
-STUB_WRANGLED = data/wrangled/helloworld.csv
-STUB_FUSED = data/compiled/helloworld.csv
-STUB_COLLECTED = data/collected/hello.txt \
-			   data/collected/world.txt
+SQLIZED_DB = data/wrapped/salaries.sqlite
+STUB_WRANGLED = data/wrangled/salaries.csv
+STUB_COMPILED = data/compiled/salaries.csv
+STUB_COLLECTED = data/collected/salaries-2020-04-03.csv
 
 help:
 	@echo 'Run `make ALL` to see how things run from scratch'
@@ -16,7 +15,7 @@ ALL: clean sqlize
 clean: clean_sqlize
 	@echo --- Cleaning stubs
 	rm -f $(STUB_WRANGLED)
-	rm -f $(STUB_FUSED)
+	rm -f $(STUB_COMPILED)
 	rm -f $(STUB_COLLECTED)
 
 
@@ -60,15 +59,18 @@ $(STUB_WRANGLED): compile ./scripts/wrangle.py
 	./scripts/wrangle.py
 
 
-compile: $(STUB_FUSED)
+compile: $(STUB_COMPILED)
 
-$(STUB_FUSED): collect ./scripts/compile.py
+$(STUB_COMPILED): collect ./scripts/compile.py
 	@echo ""
 	@echo --- Collating $@
 
 	./scripts/compile.py
 
 
-collect:
+collect: $(STUB_COLLECTED)
+
+
+$(STUB_COLLECTED):
 	@echo "Gathers $(STUB_COLLECTED)"
 	./scripts/collect.py
